@@ -54,7 +54,12 @@ public class Program {
                     String refer= scanner.nextLine();
                     for (Article article : collection) {
                         if (refer.equals(article.getReference())) {
-                            article= createArticle(refer);
+                            System.out.println("donner le nom\n");
+                            article.setNom(scanner.nextLine());
+                            System.out.println("donner le prix\n");
+                            article.setPrix(scanner.nextFloat());
+                            System.out.println("donner la quantite\n");
+                            article.setStock(scanner.nextLong());
                         }
                     }
 
